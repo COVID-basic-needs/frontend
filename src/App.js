@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import ReactMapGL from "react-map-gl";
+import ReactMapGL, {Marker, GeolocateControl} from "react-map-gl";
+
 import "./App.css";
 
 import Layout from "./Layout";
@@ -40,11 +41,17 @@ function App() {
     <Layout drawerContent={drawerContent}>
       <ReactMapGL
         {...viewport}
+        mapStyle="mapbox://styles/petercrackthecode/ck8bt6vd72cmx1jnk0s1ztp57"
         mapboxApiAccessToken={MAPBOX_TOKEN}
         onViewportChange={viewport => {
           setViewport(viewport);
         }}
-      />
+      >
+        <GeolocateControl
+          positionOptions={{enableHighAccuracy: true}}
+          trackUserLocation={true}
+        />
+      </ReactMapGL>
     </Layout>
   );
 }
