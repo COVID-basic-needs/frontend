@@ -3,8 +3,6 @@ import ReactMapGL from "react-map-gl";
 import logo from "./logo.svg";
 import "./App.css";
 
-import Map from "./Map";
-
 const MAPBOX_TOKEN= 'pk.eyJ1IjoicGV0ZXJjcmFja3RoZWNvZGUiLCJhIjoiY2s4YXo0N3MwMDNjbjNvcXVyNWhqd2RkZCJ9.eexbGa1jw1QnZTSRpK2yPg';
 
 function App() {
